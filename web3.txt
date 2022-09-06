@@ -1,0 +1,66 @@
+// 443 web3
+https://internetcomputer.org/docs/current/developer-docs/quickstart/local-quickstart/
+
+- Open PowerShell
+wsl --install
+restart pc
+
+- Open PowerShell check version
+wsl --list --verbose
+
+- install Vscode
+- install Motoko
+https://marketplace.visualstudio.com/items?itemName=dfinity-foundation.vscode-motoko
+- install Remote -WSL
+https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl
+
+https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+copy n paste to ubuntu
+
+- run ubuntu Next steps:
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/asd123456/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+sudo apt-get install build-essential
+
+brew --version
+brew install node@18
+brew link node@18
+node --version
+DFX_VERSION=0.9.3 sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
+
+*******更改和粘贴*******
+export PATH=$PATH:<REPLACE WITH YOUR INSTALLATION PATH>
+更改这个
+export PATH=$PATH:/home/asd123456/bin/dfx
+*******更改和粘贴*******
+
+echo "${PATH//:/$'\n'}"
+dfx --version
+
+- Open Vscode and click 左下角绿色小图标, 选择new wsl window
+after确保左下角绿色小图标显示wsl: ubuntu
+
+Open ubuntu
+mkdir ic-projects
+cd ic-projects
+dfx new hello
+
+- Done will show D(difinity) logo.
+explorer.exe .
+\\wsl.localhost\Ubuntu\home\asd123456\ic-projects
+
+- Vscode
+	- Open Folder
+		- select ic-projects/hello
+install Motoko
+	- Terminal
+		- New Terminal
+		dfx start
+在Terminal按ctrl + shirt + 5
+dfx deploy
+npm start
+
+
+
+
